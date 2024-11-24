@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Soccer Game</title>
+	<link rel="stylesheet" href="./game.css">
+	<script src="./game.js" defer></script>
+
+	<link rel="website icon" type="png" href="./Img/items/ball.png">
+</head>
+<body>
+
+	<div id="dashboard">
+		<!-- <div id="info_b"><h3>Info</h3></div> -->
+		<div id="board">
+			<div id="startboard" onclick="startGame()"><h3>Start Game</h3></div>
+			<div id="scoreboard"><h1>0:0</h1></div>
+			<div id="endboard">
+				<div id="scoresOfPlayer">
+					<div id="player1Score"><h2>Player 1: 0</h2></div>
+					<div id="player2Score"><h2>Player 2: 0</h2></div>
+				</div>
+			</div>
+		</div>
+		<!-- <div id="startButton" onclick="startGame()">START GAME</div> -->
+	</div>
+	<div id="debug_output" style="display: none;"></div>
+    
+    <div id="surface">
+    	<div id="player1">
+    		<img id="spriteImg1" src="./Img/Player/player1.png" alt="sprite"/>
+    	</div>
+
+		<div id="player2">
+    		<img id="spriteImg2" src="./Img/Player/player2.png" alt="sprite"/>
+    	</div>
+
+		<div id="ball">
+			<img id="ballImg" src="./Img/items/ball.png" alt="ball">
+		</div>
+    </div>
+
+	<div id="endGame-board" style="display: none;">
+		<div id="winner-b">
+			<div id="winnerHeadl">
+				 
+					<img onclick="backtoStart()" src="./Img/icon/home.png" alt="home">
+				
+				<div id="winner-id"></h1></div>
+			</div>
+			<div id="leaderBoard">
+				<h4>Leaderboard:</h4>
+				<div id="leaderboard_firsRow">
+					
+				</div>
+				<div id="leaderboard_SecondRow">
+
+				</div>
+			</div>
+			<div id="endGame-Buttons">
+				<div id="playAgain" onclick="playAgain()">Play Again</div>
+				<div id="backToStart" onclick="changeGameMode()">Change Game Mode</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="img-player1">
+		<img src="./Img/Player/player1picStart.png" alt="">
+	</div>
+	<div id="img-player2">
+		<img src="./Img/Player/player2picStart.png" alt="">
+	</div>
+
+	<div id="changeGameMode" style="display: none;">
+		<h4 id="changeGameMode-headl">Change Game Mode</h4>
+		
+		<div id="changeGameMode-buttons">
+			<button id="choise1" onclick="changedSpeed('slow')">
+				<h3>Slow Game</h3>
+			</button>
+			<button id="choise2" onclick="changedSpeed('normal')">
+				<h3>Normal Game</h3>
+			</button>
+			<button id="choise3" onclick="changedSpeed('fast')">
+				<h3>Fast Game</h3>
+			</button>
+		</div>
+	</div>
+	
+	
+</body>
+</html>

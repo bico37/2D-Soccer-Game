@@ -1,0 +1,373 @@
+* {
+  /* outline: red 2px dotted; */
+}
+/* font */
+@font-face {
+  font-family: scoreboardNumber;
+  src: url(./font/scoreboard.ttf);
+}
+@font-face {
+  font-family: scoreboardFont;
+  src: url(./font/Sport\ Bold.otf);
+}
+@font-face {
+  font-family: modernFont;
+  src: url(http://sitename.com/wp-content/themes/themename/fonts/font-name.ttf);
+}
+@font-face {
+  font-family: raleway;
+  src: url(./font/Raleway-Regular.ttf);
+}
+
+@font-face {
+  font-family: ralewayBold;
+  src: url(./font/Raleway-Bold.ttf);
+}
+
+/* General styling */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #fff;
+  background: #000;
+  background: radial-gradient(circle, #555 0%, #000 100%);
+
+  background-image: url(./Img/Background/stadium-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* dashboard outputs */
+#dashboard {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 7vw;
+}
+
+/* Middle board */
+#board {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vw;
+  height: 10%;
+}
+#startboard,
+#endboard {
+  height: 80%;
+  width: 20vw;
+  margin-top: 0.7vw;
+  background-color: blue;
+
+  -webkit-box-shadow: inset 0px 0px 3px 4px rgb(0, 36, 85);
+  -moz-box-shadow: inset 0px 0px 3px 4px rgb(0, 36, 85);
+  box-shadow: inset 0px 0px 3px 4px rgb(0, 36, 85);
+}
+
+#startboard {
+  grid-column: 1;
+  margin-right: 0;
+  margin-left: 4.3vw;
+
+  cursor: pointer;
+}
+
+/* Right Board */
+#endboard {
+  grid-column: 3;
+  margin-left: -3.4vw;
+}
+#scoresOfPlayer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3vw;
+  height: 2vw;
+  margin-top: 1.6vw;
+  width: 10vw;
+}
+#scoresOfPlayer h2 {
+  margin: 0.4vw;
+  padding: 0vw;
+
+  font-size: 1.4rem;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+
+  padding: 0;
+  margin: 0;
+}
+
+#scoreboard {
+  grid-column: 2;
+  background-color: #40efff;
+  clip-path: polygon(0 0, 100% 0, 84% 99%, 16% 100%);
+  border-radius: 2vw;
+  width: 20vw;
+  
+  -webkit-box-shadow: inset 0px 0px 3px 4px rgba(0, 0, 0, 1);
+  -moz-box-shadow: inset 0px 0px 3px 4px rgba(0, 0, 0, 1);
+  box-shadow: inset 0px 0px 3px 4px rgba(0, 0, 0, 1);
+}
+
+/* text board */
+#startboard h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: scoreboardFont;
+  letter-spacing: 5px;
+
+  padding: 0;
+  margin: 0;
+  margin-top: 1.2vw;
+}
+
+#scoreboard h1 {
+  font-size: 3rem;
+  text-align: center;
+  font-family: scoreboardNumber;
+  letter-spacing: 5px;
+  margin-top: 1vw;
+  color: #000;
+}
+
+/* SURFACE */
+#surface {
+  background: url(./Img/Background/top-view-soccer-field-2045883.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  margin: 1vw auto auto auto;
+
+  border: 3px solid rgb(13, 78, 5);
+  height: 400px;
+  width: 600px;
+  position: relative;
+  transform-origin: top;
+}
+
+/* player 1 */
+#player1 {
+  position: absolute;
+  width: 35.5px; /* viewing window */
+  height: 46px; /* viewing window */
+  overflow: hidden;
+  opacity: 0; /* hide till start */
+}
+
+/* player 2 */
+#player2 {
+  position: absolute;
+  width: 35.5px; /* viewing window */
+  height: 46px; /* viewing window */
+  overflow: hidden;
+  opacity: 0; /* hide till start */
+}
+#spriteImg1 {
+  height: 190px;
+  bottom: 78px; /* which row of sprite */
+  position: relative;
+}
+#spriteImg2 {
+  height: 190px;
+  bottom: 78px; /* which row of sprite */
+  position: relative;
+}
+
+/* items */
+/* ball */
+#ball img {
+  width: 100%;
+  opacity: 1;
+}
+#ball {
+  width: 2vw;
+  opacity: 0;
+
+  position: absolute;
+  left: 0px; /* viewing window */
+  top: 0px; /* viewing window */
+}
+
+
+/* ENDGAME BOARD */
+#winnerHeadl{
+  display: grid;
+  grid-template-columns: 15% 80%;
+}
+#winnerHeadl img{
+  width: 3vw;
+  padding-left: 1vw;
+  padding-top: 1vw;
+  height: 3vw;
+  cursor:pointer;
+}
+#homeb{
+  
+}
+
+
+#endGame-board{
+  position: absolute;
+  left: 38%;
+  top: 29%;
+  width: 25vw;
+  height: 25vw;
+
+  border-radius: 35px;
+  background: linear-gradient(145deg, #009318, #00ae1d);
+  box-shadow:  5px 5px 16px #00530e,
+             -5px -5px 16px #00f328;
+}
+#winner-id{
+  text-transform: uppercase;
+  text-align: center;
+  color: blue;
+  z-index: 2;
+}
+
+#endGame-Buttons{
+  justify-items: center;
+  align-items: center;
+  
+}
+#playAgain, #backToStart{
+  margin: 0vw 2vw 0 2vw;
+  text-align: center;
+  background-color: #009318;
+  border: #00530e 2px solid;
+  padding: 1.3vw;
+  cursor: pointer;
+  width: 18vw;
+  border-radius: 1vw;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+
+  transition: all ease-in-out 0.4s;
+}
+
+#playAgain:hover, #backToStart:hover{
+  background-color: #005d0f;
+  scale: 1.03;
+}
+
+#playAgain:active, #backToStart:active{
+  scale: 0.90;
+}
+#backToStart{
+  margin-top: 1vw;  
+}
+
+#img-player1{
+  position: fixed;
+  left: 11.4%;
+  top: 40%;
+}
+#img-player2{
+  position: fixed;
+  left: 80%;
+  top: 40%;
+}
+
+/* LeaderBoard */
+#leaderBoard{
+  width: 100%;
+
+  padding: 3% 3% 0 3%;
+}
+#leaderBoard h4{
+  margin: 0;
+  padding: 0;
+
+  width: 11vw;
+
+  font-size: 1.5rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border-bottom: 2px black solid;
+}
+
+#leaderboard_firsRow{
+  margin: 1vw 0 0 1vw;
+
+}
+#leaderboard_firsRow p{
+  font-size: 1.3rem;
+  font-family: raleway;
+}
+#leaderboard_SecondRow{
+  margin: 1vw 0 0 1vw;
+}
+#leaderboard_SecondRow p{
+  font-size: 1.3rem;
+  font-family: raleway;
+}
+
+#leaderBoard span{
+  font-size: 1.35;
+  margin-right: 20%;
+  font-family: ralewayBold;
+}
+
+/* Change game mode */
+#changeGameMode-headl{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  font-size: 1.6rem;
+  border-bottom: #ffffff 2px solid;
+  width: 97.6%;
+
+  
+  padding: 0.3vw;
+}
+
+#changeGameMode-buttons{
+  display: grid;
+  justify-content: center;
+  
+  padding: 0.3vw;
+}
+#choise1, #choise2, #choise3{
+  width: 23vw;
+  margin: 1vw 0vw 0vw 1vw;
+  border-radius: 1vw;
+  background-color: #00530e;
+
+  transition: all 0.2s ease;
+}
+#choise1:hover, #choise2:hover, #choise3:hover{
+  background-color: #005d0f;
+  transform: scale(1.03);
+  
+}
+#choise1:active, #choise2:active, #choise3:active{
+  transform: scale(0.97);
+}
+
+#changeGameMode{
+  display: flex;
+  
+  position: absolute;
+  left: 38%;
+  top: 29%;
+  width: 26vw;
+  height: 26vw;
+
+  border-radius: 35px;
+  background: linear-gradient(145deg, #009318, #00ae1d);
+  box-shadow:  5px 5px 16px #00530e,
+             -5px -5px 16px #00f328;
+
+  z-index: 2;
+
+}

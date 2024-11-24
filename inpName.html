@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soccer Game</title>
+
+    <link rel="stylesheet" href="./inpName.css">
+    <script src="./inpName.js" defer></script>
+
+    <link rel="website icon" type="png" href="./Img/items/ball.png">
+</head>
+<body>
+    <div id="content">
+        <div id="cont-box">
+            <div id="grid-headl">
+                <h1>Join Game</h1>
+            </div>
+
+            <div id="grid-box1">
+                <div id="grid-input-P1">
+                    <h2>Player 1 Name:</h2>
+                    <div class="custom_input">
+                        <input class="input" id="player1_name" type="text" placeholder="Game Name Player 1">
+                    </div>
+                </div>
+                
+            </div>
+            <div id="grid-box2">
+                <div id="grid-input-P2">
+                    <h2>Player 2 Name:</h2>
+                    <div class="custom_input">
+                        <input class="input" id="player2_name" type="text" placeholder="Game Name Player 2">
+                    </div>
+                </div>
+                <div id="names-answer"></div>
+            </div>
+
+            <div id="img-players">
+                <div id="imgPlayer1">
+                    <img src="./Img/Player/player1picStart.png" alt="player 1">
+                </div>
+                <div id="imgPlayer2">
+                    <img src="./Img/Player/player2picStart.png" alt="player 2">
+                </div>
+            </div>
+              
+            <div id="button">
+                <!-- HTML !-->
+                <button class="button-33" role="button" onclick="submitNames()">Submit</button>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+</body>
+</html>
